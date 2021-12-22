@@ -1,0 +1,14 @@
+{
+  "name": "pm2ui",
+  "version": "1.0.0",
+  "description": "PM2 web admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "malahov.dmitry@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
