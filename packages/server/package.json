@@ -4,7 +4,7 @@
   "description": "Admin portal for PM2 processes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit",
+    "test": "mocha --exit --colors",
     "build": "babel src -d dist",
     "dev": "babel-watch src/index"
   },
