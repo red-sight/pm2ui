@@ -1,29 +1,25 @@
 {
   "name": "client",
   "version": "0.0.1",
-  "description": "Web app for PM2 administration",
-  "productName": "PM2UI",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
   "author": "malahov.dmitry@gmail.com",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "lint": "eslint --ext .js,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
+    "bytes": "^3.1.1",
     "core-js": "^3.6.5",
     "quasar": "^2.0.0",
+    "set-interval-async": "^2.0.3",
     "vue-i18n": "^9.0.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
-    "@quasar/app": "^3.0.0",
-    "eslint": "^7.14.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-vue": "^7.0.0",
-    "eslint-webpack-plugin": "^2.4.0"
+    "@quasar/app": "^3.0.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
