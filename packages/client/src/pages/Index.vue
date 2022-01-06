@@ -57,18 +57,22 @@ export default defineComponent({
 
   data() {
     return {
-      list: [],
       loading: false,
+      timer: null,
     };
+  },
+
+  computed: {
+    list() {
+      return this.$store.state.processes.list;
+    },
   },
 
   methods: {
     async getList() {
       this.loading = true;
-      const res = await this.$api.get("apps");
+      await this.$store.dispatch("processes/getList");
       this.loading = false;
-      if (res && res.data) this.list = Object.values(res.data);
-      console.log(res.data);
     },
 
     toMb(byte) {
@@ -81,10 +85,13 @@ export default defineComponent({
   },
 
   mounted() {
-    this.getList();
-    const timer = setIntervalAsync(async () => {
-      await this.getList();
-    }, 5000);
+    /* this.getList();
+    if (!this.$store.state.processes.initialized) {
+      this.$store.commit("processes/init");
+      this.timer = setIntervalAsync(async () => {
+        await this.getList();
+      }, 5000);
+    } */
   },
 });
 </script>
